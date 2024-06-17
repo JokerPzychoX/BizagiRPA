@@ -1,0 +1,69 @@
+{
+  "name": "UiPath_RPA_SantiR",
+  "projectId": "cc99cf9d-d633-4f49-88fc-1c8763d2a6b2",
+  "description": "Proceso para la consulta de datos en CNT - David Revelo",
+  "main": "ActualizacionDatos.xaml",
+  "dependencies": {
+    "OfficeOpenXml.Core.ExcelPackage": "[1.0.0]",
+    "UiPath.Cryptography.Activities": "[1.2.1]",
+    "UiPath.Excel.Activities": "[2.23.3-preview]",
+    "UiPath.Mail.Activities": "[1.12.3]",
+    "UiPath.System.Activities": "[22.4.1]",
+    "UiPath.UIAutomation.Activities": "[22.4.6]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "21.10.3.0",
+  "projectVersion": "1.1.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "CSharp",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "1f0d1260-b599-4e21-a3d8-9b97a3faea01",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "ActualizacionDatos.xaml",
+      "uniqueId": "9f6d6ef9-6664-420b-ba7e-68663553a679",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}

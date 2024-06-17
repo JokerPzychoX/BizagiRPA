@@ -1,0 +1,17 @@
+trigger:
+- master 
+- release/test
+- develop
+
+variables:
+  buildWorkingDirectory: $(Build.Repository.Name)
+
+resources:
+ repositories:
+   - repository: UiPathTemplate
+     type: git
+     name: BP-RPA/common-pipeline-template-uipath
+     ref: refs/heads/develop
+
+extends:
+  template: pipeline_ui.yml@UiPathTemplate

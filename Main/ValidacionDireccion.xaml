@@ -1,0 +1,397 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ValidacionDireccion" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_DatosDireccion" Type="InArgument(s:String[])" />
+  </x:Members>
+  <this:ValidacionDireccion.in_DatosDireccion>
+    <InArgument x:TypeArguments="s:String[]">
+      <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">new String[] {"Ecuador", "AZUAY", "GUALACEO", "Antonio Arcos, calle.", "Carlos, Bustamante. ", "Urb California Alta, Casa F2", "NORTE", "SI"}</mca:CSharpValue>
+    </InArgument>
+  </this:ValidacionDireccion.in_DatosDireccion>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>768.8,3192.8</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Cryptography</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ValidacionDireccion" sap:VirtualizedContainerService.HintSize="779.2,3048" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Name="ValidacionDireccion" />
+      <Variable x:TypeArguments="x:Int32" Name="ContadorVerificacion" />
+      <Variable x:TypeArguments="s:String[]" Name="DatosValidar">
+        <Variable.Default>
+          <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">new string[] {"país", "provincia","ciudad","calle principal","calle secundaria","información adicional","zona","correspondencia"}</mca:CSharpValue>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="s:String[]" Name="DatosSiNo">
+        <Variable.Default>
+          <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">new string[] {"SI","NO"}</mca:CSharpValue>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="s:String[]" Name="DatosZona">
+        <Variable.Default>
+          <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">new string[] {"NINGUNA","CENTRO","NORTE","PERIFERIA RURAL","PERIFERIA URBANA","SUR"}</mca:CSharpValue>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message inicio" sap:VirtualizedContainerService.HintSize="737.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">"Iniciando la validación de datos de la dirección..."</mca:CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <ui:InterruptibleWhile DisplayName="While validacion pais" sap:VirtualizedContainerService.HintSize="737.6,804.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+      <ui:InterruptibleWhile.Body>
+        <Sequence DisplayName="Validar Pais provincia ciudad" sap:VirtualizedContainerService.HintSize="702.4,637.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:IsMatch BuilderPattern="^[A-Za-z\s]{1,20}$" DisplayName="Is Match dato pais" sap:VirtualizedContainerService.HintSize="660.8,60" sap2010:WorkflowViewState.IdRef="IsMatch_2" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;^[A-Za-z\\s]{1,20}$&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="^[A-Za-z\s]{1,20}$" RegexOption="IgnoreCase, Compiled">
+            <ui:IsMatch.Input>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">in_DatosDireccion[ContadorVerificacion]</mca:CSharpValue>
+              </InArgument>
+            </ui:IsMatch.Input>
+            <ui:IsMatch.Result>
+              <OutArgument x:TypeArguments="x:Boolean">
+                <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">ValidacionDireccion</mca:CSharpReference>
+              </OutArgument>
+            </ui:IsMatch.Result>
+          </ui:IsMatch>
+          <If DisplayName="If validacion datos direccion" sap:VirtualizedContainerService.HintSize="660.8,344.8" sap2010:WorkflowViewState.IdRef="If_2">
+            <If.Condition>
+              <InArgument x:TypeArguments="x:Boolean">
+                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">ValidacionDireccion</mca:CSharpValue>
+              </InArgument>
+            </If.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Sequence DisplayName="Validación correcta dato" sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message validacion correcta" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+                  <ui:LogMessage.Message>
+                    <InArgument x:TypeArguments="x:Object">
+                      <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">"-&gt; validación correcta de " + DatosValidar[ContadorVerificacion]</mca:CSharpValue>
+                    </InArgument>
+                  </ui:LogMessage.Message>
+                </ui:LogMessage>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Validación erronea de dato dirección" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Throw sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_2">
+                  <InArgument x:TypeArguments="s:Exception">
+                    <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">new BusinessRuleException("Error de validación de " + DatosValidar[ContadorVerificacion] + ", deben usarse únicamente letras y números, sin caracteres especiales (longitud máxima 20 caracteres). Favor ingrese los datos nuevamente.")</mca:CSharpValue>
+                  </InArgument>
+                </Throw>
+              </Sequence>
+            </If.Else>
+          </If>
+          <Assign DisplayName="Contador" sap:VirtualizedContainerService.HintSize="660.8,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">
+                <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">ContadorVerificacion</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">
+                <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">ContadorVerificacion+1</mca:CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </ui:InterruptibleWhile.Body>
+      <ui:InterruptibleWhile.Condition>
+        <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">ContadorVerificacion &lt;= 2</mca:CSharpValue>
+      </ui:InterruptibleWhile.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InterruptibleWhile>
+    <ui:InterruptibleWhile DisplayName="While validacion direccion" sap:VirtualizedContainerService.HintSize="737.6,1193.6" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+      <ui:InterruptibleWhile.Body>
+        <Sequence DisplayName="Validar" sap:VirtualizedContainerService.HintSize="702.4,1026.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:IsMatch BuilderPattern="^[A-Za-z0-9.,\s]{1,40}$" DisplayName="Is Match dato direccion" sap:VirtualizedContainerService.HintSize="660.8,60" sap2010:WorkflowViewState.IdRef="IsMatch_1" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;ADV&quot;,&quot;OperationName&quot;:&quot;Advanced&quot;,&quot;OperationValue&quot;:&quot;^[A-Za-z0-9.,\\s]{1,40}$&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="^[A-Za-z0-9.,\s]{1,40}$" RegexOption="IgnoreCase, Compiled">
+            <ui:IsMatch.Input>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">in_DatosDireccion[ContadorVerificacion]</mca:CSharpValue>
+              </InArgument>
+            </ui:IsMatch.Input>
+            <ui:IsMatch.Result>
+              <OutArgument x:TypeArguments="x:Boolean">
+                <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">ValidacionDireccion</mca:CSharpReference>
+              </OutArgument>
+            </ui:IsMatch.Result>
+          </ui:IsMatch>
+          <If DisplayName="If validacion datos direccion" sap:VirtualizedContainerService.HintSize="660.8,344.8" sap2010:WorkflowViewState.IdRef="If_1">
+            <If.Condition>
+              <InArgument x:TypeArguments="x:Boolean">
+                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">ValidacionDireccion</mca:CSharpValue>
+              </InArgument>
+            </If.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Sequence DisplayName="Validación correcta dato" sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message validacion correcta" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
+                  <ui:LogMessage.Message>
+                    <InArgument x:TypeArguments="x:Object">
+                      <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">"-&gt; validación correcta de " + DatosValidar[ContadorVerificacion]</mca:CSharpValue>
+                    </InArgument>
+                  </ui:LogMessage.Message>
+                </ui:LogMessage>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Validación erronea de dato dirección" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Throw sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_1">
+                  <InArgument x:TypeArguments="s:Exception">
+                    <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">new BusinessRuleException("Error de validación de " + DatosValidar[ContadorVerificacion] + ", deben usarse únicamente letras y números, sin caracteres especiales (longitud máxima 40 caracteres). Favor ingrese los datos nuevamente.")</mca:CSharpValue>
+                  </InArgument>
+                </Throw>
+              </Sequence>
+            </If.Else>
+          </If>
+          <ui:IsMatch BuilderPattern="(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-a-zA-Z0-9+&amp;@#\/%=~_|$?!:,.]*\)|[-a-zA-Z0-9+&amp;@#\/%=~_|$?!:,.])*(?:\([-a-zA-Z0-9+&amp;@#\/%=~_|$?!:,.]*\)|[a-zA-Z0-9+&amp;@#\/%=~_|$])" DisplayName="Is Match dato direccion 2" sap:VirtualizedContainerService.HintSize="660.8,60" sap2010:WorkflowViewState.IdRef="IsMatch_3" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;URL&quot;,&quot;OperationName&quot;:&quot;URL&quot;,&quot;OperationValue&quot;:&quot;(?:(?:https?|ftp|file):\\\/\\\/|www\\.|ftp\\.)(?:\\([-a-zA-Z0-9+&amp;@#\\\/%=~_|$?!:,.]*\\)|[-a-zA-Z0-9+&amp;@#\\\/%=~_|$?!:,.])*(?:\\([-a-zA-Z0-9+&amp;@#\\\/%=~_|$?!:,.]*\\)|[a-zA-Z0-9+&amp;@#\\\/%=~_|$])&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-a-zA-Z0-9+&amp;@#\/%=~_|$?!:,.]*\)|[-a-zA-Z0-9+&amp;@#\/%=~_|$?!:,.])*(?:\([-a-zA-Z0-9+&amp;@#\/%=~_|$?!:,.]*\)|[a-zA-Z0-9+&amp;@#\/%=~_|$])" RegexOption="IgnoreCase, Compiled">
+            <ui:IsMatch.Input>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">in_DatosDireccion[ContadorVerificacion]</mca:CSharpValue>
+              </InArgument>
+            </ui:IsMatch.Input>
+            <ui:IsMatch.Result>
+              <OutArgument x:TypeArguments="x:Boolean">
+                <mca:CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">ValidacionDireccion</mca:CSharpReference>
+              </OutArgument>
+            </ui:IsMatch.Result>
+          </ui:IsMatch>
+          <If DisplayName="If url direccion" sap:VirtualizedContainerService.HintSize="660.8,248.8" sap2010:WorkflowViewState.IdRef="If_5">
+            <If.Condition>
+              <InArgument x:TypeArguments="x:Boolean">
+                <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">ValidacionDireccion</mca:CSharpValue>
+              </InArgument>
+            </If.Condition>
+            <If.Then>
+              <Throw sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_5">
+                <InArgument x:TypeArguments="s:Exception">
+                  <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">new BusinessRuleException("Error de validación de " + DatosValidar[ContadorVerificacion] + ", deben usarse únicamente letras y números, sin caracteres especiales (longitud máxima 40 caracteres). Favor ingrese los datos nuevamente.")</mca:CSharpValue>
+                </InArgument>
+              </Throw>
+            </If.Then>
+            <If.Else>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+            </If.Else>
+          </If>
+          <Assign DisplayName="Contador" sap:VirtualizedContainerService.HintSize="660.8,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">
+                <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">ContadorVerificacion</mca:CSharpReference>
+              </OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">
+                <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">ContadorVerificacion+1</mca:CSharpValue>
+              </InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </ui:InterruptibleWhile.Body>
+      <ui:InterruptibleWhile.Condition>
+        <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">ContadorVerificacion &lt;= 5</mca:CSharpValue>
+      </ui:InterruptibleWhile.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InterruptibleWhile>
+    <If DisplayName="If zona" sap:VirtualizedContainerService.HintSize="737.6,252" sap2010:WorkflowViewState.IdRef="If_4">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">DatosZona.Contains(in_DatosDireccion[6])</mca:CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <ui:LogMessage DisplayName="Log Message validacion correcta correspondencia" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
+          <ui:LogMessage.Message>
+            <InArgument x:TypeArguments="x:Object">
+              <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">"-&gt; validación correcta de " + DatosValidar[ContadorVerificacion]</mca:CSharpValue>
+            </InArgument>
+          </ui:LogMessage.Message>
+        </ui:LogMessage>
+      </If.Then>
+      <If.Else>
+        <Throw sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_4">
+          <InArgument x:TypeArguments="s:Exception">
+            <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">new BusinessRuleException("Error de validación de " + DatosValidar[ContadorVerificacion] + ", favor escoja únicamente los datos de la lista desplegable.")</mca:CSharpValue>
+          </InArgument>
+        </Throw>
+      </If.Else>
+    </If>
+    <Assign DisplayName="Contador" sap:VirtualizedContainerService.HintSize="737.6,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">
+          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">ContadorVerificacion</mca:CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">
+          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">ContadorVerificacion+1</mca:CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <If DisplayName="If correspondencia" sap:VirtualizedContainerService.HintSize="737.6,252" sap2010:WorkflowViewState.IdRef="If_3">
+      <If.Condition>
+        <InArgument x:TypeArguments="x:Boolean">
+          <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">DatosSiNo.Contains(in_DatosDireccion[7])</mca:CSharpValue>
+        </InArgument>
+      </If.Condition>
+      <If.Then>
+        <ui:LogMessage DisplayName="Log Message validacion correcta correspondencia" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
+          <ui:LogMessage.Message>
+            <InArgument x:TypeArguments="x:Object">
+              <mca:CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">"-&gt; validación correcta de " + DatosValidar[ContadorVerificacion]</mca:CSharpValue>
+            </InArgument>
+          </ui:LogMessage.Message>
+        </ui:LogMessage>
+      </If.Then>
+      <If.Else>
+        <Throw sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_3">
+          <InArgument x:TypeArguments="s:Exception">
+            <mca:CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">new BusinessRuleException("Error de validación de " + DatosValidar[ContadorVerificacion] + ", deben usarse únicamente los valores SI y NO). Favor ingrese los datos nuevamente.")</mca:CSharpValue>
+          </InArgument>
+        </Throw>
+      </If.Else>
+    </If>
+    <Assign DisplayName="Contador" sap:VirtualizedContainerService.HintSize="737.6,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">
+          <mca:CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">ContadorVerificacion</mca:CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">
+          <mca:CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">ContadorVerificacion+1</mca:CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+  </Sequence>
+</Activity>

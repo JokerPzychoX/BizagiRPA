@@ -1,0 +1,96 @@
+{
+  "version": "1.0",
+  "resources": [
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "LoginCentral_CredentialsActu",
+          "isExpression": false
+        },
+        "folderPath": {
+          "defaultValue": "Actualización de Datos",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "LoginCentral_CredentialsActu",
+          "isExpression": false
+        },
+        "folderPath": {
+          "defaultValue": "BP-RPAUi-ActualizacionDeDatos",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "KeyVal",
+          "isExpression": false
+        },
+        "folderPath": {
+          "defaultValue": "BP-RPAUi-ActualizacionDeDatos",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "UsuariosApp",
+          "isExpression": false
+        },
+        "folderPath": {
+          "defaultValue": "BP-RPAUi-ActualizacionDeDatos",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "LoginCentral_URL",
+          "isExpression": false
+        },
+        "folderPath": {
+          "defaultValue": "BP-RPAUi-ActualizacionDeDatos",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Portal_URL",
+          "isExpression": false
+        },
+        "folderPath": {
+          "defaultValue": "BP-RPAUi-ActualizacionDeDatos",
+          "isExpression": false
+        }
+      }
+    },
+    {
+      "resource": "asset",
+      "metadata": {
+        "name": {
+          "defaultValue": "Screenshots_Path",
+          "isExpression": false
+        },
+        "folderPath": {
+          "defaultValue": "BP-RPAUi-ActualizacionDeDatos",
+          "isExpression": false
+        }
+      }
+    }
+  ]
+}
